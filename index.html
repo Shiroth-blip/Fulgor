@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>fulgor — Estudio de branding y diseño web</title>
+  <meta name="description" content="De la chispa a la llama. Identidades visuales con carácter y sitios web pensados para prender y convertir. Sin rodeos ni jerga de agencia.">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="fulgor — Estudio de branding y diseño web">
+  <meta property="og:description" content="Identidades visuales con carácter y sitios web pensados para prender y convertir.">
+  <meta property="og:image" content="assets/images/logo-star.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-star.png">
+
+  <!-- Google Fonts: Fredoka (Headlines), Plus Jakarta Sans (Body), Space Grotesk (Badges/Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,1,0" rel="stylesheet">
+
+  <!-- Tailwind CSS v3 via CDN with custom theme extend -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "dark-base": "#0A0A0A",
+            "paper": "#FAFAF7",
+            "fulgor-yellow": "#FFE14D",
+            "riot-pink": "#FF3E7F",
+            "electric-blue": "#3D9DFF",
+            "surface-dark": "#141414",
+            "surface-card": "#1C1C1C",
+            "border-dark": "#272727",
+            "border-light": "#E8E7E0"
+          },
+          fontFamily: {
+            headline: ["Fredoka", "sans-serif"],
+            body: ["Plus Jakarta Sans", "sans-serif"],
+            mono: ["Space Grotesk", "monospace"]
+          },
+          boxShadow: {
+            'pop-yellow': '5px 5px 0px 0px #FFE14D',
+            'pop-pink': '5px 5px 0px 0px #FF3E7F',
+            'pop-blue': '5px 5px 0px 0px #3D9DFF',
+            'pop-black': '5px 5px 0px 0px #0A0A0A',
+            'pop-white': '5px 5px 0px 0px #FAFAF7',
+            'sticker': '0 8px 0 0 rgba(0,0,0,0.15)'
+          }
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-dark-base text-paper font-body antialiased selection:bg-fulgor-yellow selection:text-dark-base min-h-screen flex flex-col">
+
+  <!-- ======================================================================
+       1. STICKY HEADER
+       ====================================================================== -->
+  <header class="sticky top-0 z-50 w-full bg-dark-base/90 backdrop-blur-md border-b-2 border-white/10 transition-all duration-200">
+    <div class="max-w-[1360px] mx-auto px-5 sm:px-8 py-4 flex justify-between items-center">
+      <!-- Monochrome Brand Logo -->
+      <a class="flex items-center gap-2.5 group transition-transform active:scale-95" href="#" aria-label="fulgor inicio">
+        <div class="w-8 h-8 flex items-center justify-center">
+          <img alt="fulgor estrella logo" class="w-full h-full object-contain star-monochrome-white group-hover:rotate-45 transition-transform duration-300" src="assets/images/logo-star.png" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBL93FmOJDcMXFgh417xZsH-MC3h4t7t4StKwjkg-qtIUjNFZhXVip2p9PPA28HHfPuuYv7X9f9M_EJWdOeLpzlkys1s15A5CUOyMrFYGo5QgCm3kLGnw5HzyevEOmrhlzbwbMRfVv93rnnDbkkTDLkcmbnA_Tuoudo4A61z3040jRvCrnBoWGnp6kVgtHU1b-EqZv1pHrFNneP--WbVb9VFVqohiCSeyTpiZModaQCeIUShAmomxc3cbRcKLC7cf6zyr8';">
+        </div>
+        <span class="font-headline font-bold text-2xl tracking-tight lowercase text-paper">fulgor</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="text-sm font-semibold tracking-wide text-paper/80 hover:text-fulgor-yellow transition-colors font-mono uppercase" href="#que-hacemos">Qué hacemos</a>
+        <a class="text-sm font-semibold tracking-wide text-paper/80 hover:text-fulgor-yellow transition-colors font-mono uppercase" href="#como-trabajamos">Cómo trabajamos</a>
+        <a class="text-sm font-semibold tracking-wide text-paper/80 hover:text-fulgor-yellow transition-colors font-mono uppercase" href="#por-que-fulgor">Por qué fulgor</a>
+      </nav>
+
+      <!-- Action Button & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <a class="px-5 py-2.5 rounded-full bg-fulgor-yellow text-dark-base font-headline font-bold text-sm tracking-wide border-2 border-dark-base hover:bg-white hover:shadow-pop-pink active:scale-95 transition-all duration-200 flex items-center gap-1.5 cta-spark-pulse" href="#contacto">
+          <span>Hablemos</span>
+          <span class="material-symbols-outlined text-[17px]">north_east</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-surface-card border border-white/20 text-paper hover:text-fulgor-yellow active:scale-95 transition-all">
+          <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-dark-base/98 border-b-2 border-white/10 px-6 py-6 transition-all duration-300">
+      <nav class="flex flex-col gap-4 font-mono text-sm uppercase tracking-wider">
+        <a class="mobile-nav-link text-paper/90 hover:text-fulgor-yellow py-2 border-b border-white/5 flex items-center justify-between" href="#que-hacemos">
+          <span>Qué hacemos</span>
+          <span class="text-fulgor-yellow">✦</span>
+        </a>
+        <a class="mobile-nav-link text-paper/90 hover:text-fulgor-yellow py-2 border-b border-white/5 flex items-center justify-between" href="#como-trabajamos">
+          <span>Cómo trabajamos</span>
+          <span class="text-riot-pink">✦</span>
+        </a>
+        <a class="mobile-nav-link text-paper/90 hover:text-fulgor-yellow py-2 border-b border-white/5 flex items-center justify-between" href="#por-que-fulgor">
+          <span>Por qué fulgor</span>
+          <span class="text-electric-blue">✦</span>
+        </a>
+        <a class="mobile-nav-link text-paper/90 hover:text-fulgor-yellow py-2 border-b border-white/5 flex items-center justify-between" href="#contacto">
+          <span>Contacto</span>
+          <span class="text-fulgor-yellow">⚡</span>
+        </a>
+        <a class="mobile-nav-link text-paper/90 hover:text-riot-pink py-2 flex items-center justify-between" href="https://www.instagram.com/fulgor_studio_/" target="_blank" rel="noopener noreferrer">
+          <span>Instagram (@fulgor_studio_)</span>
+          <span class="text-riot-pink">↗</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section class="relative bg-dark-base overflow-hidden px-5 sm:px-8 pt-16 pb-24 md:pt-24 md:pb-32 border-b-4 border-dark-base" id="hero-section">
+      <!-- High-Voltage Energy Glow behind Hero -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] md:w-[750px] h-[450px] bg-fulgor-yellow/15 blur-[140px] pointer-events-none rounded-full"></div>
+      <div class="absolute top-12 right-10 w-64 h-64 bg-riot-pink/15 blur-[120px] pointer-events-none rounded-full"></div>
+      
+      <div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
+        <!-- Pop Badges Row -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-8">
+          <div class="sticker-badge-light bg-dark-base px-3.5 py-1.5 rounded-full text-xs text-fulgor-yellow shadow-sm sticker-hover-wiggle">
+            <span class="inline-block w-2 h-2 rounded-full bg-fulgor-yellow animate-ping"></span>
+            <span>Estudio de Branding &amp; Web</span>
+          </div>
+          <div class="sticker-badge bg-fulgor-yellow text-dark-base px-3.5 py-1.5 rounded-full text-xs shadow-sm transform -rotate-2 sticker-hover-wiggle hover:rotate-0">
+            <span>🔥 Todo gran fuego empezó con una chispa</span>
+          </div>
+        </div>
+
+        <!-- Giant 8-Point Star Badge (Monochrome) with Pulse Spark Glow -->
+        <div class="relative mb-6 group cursor-pointer">
+          <div class="w-28 h-28 md:w-36 md:h-36 rounded-3xl bg-paper p-5 border-4 border-dark-base shadow-pop-yellow flex items-center justify-center transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-pop-pink">
+            <img alt="fulgor isotipo estrella" class="w-full h-full object-contain star-monochrome-black group-hover:rotate-90 transition-transform duration-500 ease-out" src="assets/images/logo-star.png" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDN3BdAzDSF4ppMr-xx9Tausmzncyr-9Qe9eMJsolaG60ObhQeIKYxINJ52jS0QUTrVWS9eW5ojPvPG-obY8AyWhUjekDUsave6h8ps-1Yhsy8oXP22PjxTfgiRSGDxaPg9k10JT4jLmynpx1yTpRmm1w9d7FecoDfdDzqi9Im4MyUEskZC8Wiwxs5gw8yMMvT2PgLINsH6sRvHIHKjUqtXdszsVfSzI2xvny4Rw2w6s2iRE08c0kOjj4OkdTGMst8wX78';">
+          </div>
+          <!-- Sticker Label on Star with Hover Wiggle -->
+          <span class="absolute -bottom-2.5 -right-3 bg-riot-pink text-paper text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-md border-2 border-dark-base shadow-sm rotate-6 sticker-hover-wiggle">
+            EST. 2024
+          </span>
+        </div>
+
+        <!-- Strictly Lowercase Wordmark Reference -->
+        <p class="font-headline font-bold text-2xl md:text-3xl tracking-tight lowercase text-paper/90 mb-3">
+          fulgor
+        </p>
+
+        <!-- Primary Hero Tagline with animated squiggle wave -->
+        <h1 class="font-headline font-bold text-5xl sm:text-6xl md:text-8xl tracking-tight text-paper max-w-4xl leading-[1.02] mb-6">
+          Encendemos <br class="hidden sm:inline">
+          <span class="text-fulgor-yellow relative inline-block">
+            tu marca.
+            <!-- Squiggle ondulado decorativo Riot Pink (#FF3E7F) -->
+            <svg class="absolute left-0 -bottom-3 sm:-bottom-4 w-full h-4 sm:h-5 text-riot-pink squiggle-svg overflow-visible pointer-events-none" fill="none" preserveAspectRatio="none" viewBox="0 0 260 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14C24 4 38 4 58 14C78 24 92 24 112 14C132 4 146 4 166 14C186 24 200 24 220 14C236 6 248 8 256 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+            </svg>
+          </span>
+        </h1>
+
+        <!-- Subtitle & Storytelling punch -->
+        <p class="font-body text-lg sm:text-xl md:text-2xl text-paper/85 max-w-2xl mx-auto font-medium leading-relaxed mb-10">
+          De la chispa a la llama. Identidades visuales con carácter y sitios web pensados para prender y convertir.
+        </p>
+
+        <!-- CTA Buttons Row -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto justify-center">
+          <a class="w-full sm:w-auto px-8 py-4 rounded-full bg-fulgor-yellow text-dark-base font-headline font-bold text-lg border-3 border-dark-base shadow-pop-pink hover:translate-x-1 hover:translate-y-1 hover:shadow-none active:scale-95 transition-all duration-150 flex items-center justify-center gap-2 group cta-spark-pulse" href="#contacto">
+            <span>Empecemos</span>
+            <span class="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <a class="w-full sm:w-auto px-8 py-4 rounded-full bg-surface-card hover:bg-riot-pink text-paper font-headline font-bold text-lg border-2 border-paper/20 hover:border-dark-base transition-all duration-200 flex items-center justify-center gap-2 hover:-translate-y-0.5" href="#que-hacemos">
+            <span>Ver qué hacemos</span>
+            <span class="material-symbols-outlined text-xl group-hover:translate-y-1 transition-transform">south</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TICKER STRIP (Seamless Infinite Marquee)
+         ====================================================================== -->
+    <div class="bg-fulgor-yellow border-y-4 border-dark-base py-3 overflow-hidden select-none marquee-wrapper">
+      <div class="animate-marquee font-mono font-bold text-dark-base text-sm tracking-widest uppercase">
+        <div class="flex gap-8 px-4 items-center">
+          <span class="flex items-center gap-3">✦ BRANDING CON CARÁCTER</span>
+          <span class="flex items-center gap-3">✦ SITIOS WEB QUE PRENDEN</span>
+          <span class="flex items-center gap-3">✦ SIN RODEOS NI JERGA DE AGENCIA</span>
+          <span class="flex items-center gap-3">✦ IDENTIDADES RECORDABLES</span>
+          <span class="flex items-center gap-3">✦ BRANDING CON CARÁCTER</span>
+          <span class="flex items-center gap-3">✦ SITIOS WEB QUE PRENDEN</span>
+          <span class="flex items-center gap-3">✦ SIN RODEOS NI JERGA DE AGENCIA</span>
+          <span class="flex items-center gap-3">✦ IDENTIDADES RECORDABLES</span>
+        </div>
+        <div aria-hidden="true" class="flex gap-8 px-4 items-center">
+          <span class="flex items-center gap-3">✦ BRANDING CON CARÁCTER</span>
+          <span class="flex items-center gap-3">✦ SITIOS WEB QUE PRENDEN</span>
+          <span class="flex items-center gap-3">✦ SIN RODEOS NI JERGA DE AGENCIA</span>
+          <span class="flex items-center gap-3">✦ IDENTIDADES RECORDABLES</span>
+          <span class="flex items-center gap-3">✦ BRANDING CON CARÁCTER</span>
+          <span class="flex items-center gap-3">✦ SITIOS WEB QUE PRENDEN</span>
+          <span class="flex items-center gap-3">✦ SIN RODEOS NI JERGA DE AGENCIA</span>
+          <span class="flex items-center gap-3">✦ IDENTIDADES RECORDABLES</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         3. QUÉ HACEMOS (SERVICES) - Crisp Paper White Section
+         ====================================================================== -->
+    <section class="bg-paper text-dark-base py-20 md:py-28 px-5 sm:px-8 border-b-4 border-dark-base" id="que-hacemos">
+      <div class="max-w-[1360px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="sticker-badge bg-riot-pink text-paper px-3 py-1 rounded-md text-xs mb-3 rotate-1 sticker-hover-wiggle">
+              <span>SERVICIOS</span>
+            </div>
+            <h2 class="font-headline font-bold text-4xl sm:text-5xl md:text-6xl text-dark-base tracking-tight">
+              Qué hacemos
+            </h2>
+          </div>
+          <p class="font-body text-base md:text-lg text-dark-base/80 max-w-md font-medium leading-relaxed">
+            Soluciones visuales y digitales a medida, directas, sin pasos innecesarios ni complejidades artificiales.
+          </p>
+        </div>
+
+        <!-- 3 High-Impact Cards (Enhanced Sticker Pop Lift & Colored Hover Shadow) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1: Branding -->
+          <div class="bg-white rounded-3xl p-8 border-4 border-dark-base shadow-pop-pink pop-card-interactive hover:shadow-[7px_7px_0px_#FF3E7F] flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-14 h-14 rounded-2xl bg-riot-pink text-paper border-2 border-dark-base flex items-center justify-center shadow-sm group-hover:rotate-6 transition-transform">
+                  <span class="material-symbols-outlined text-3xl">palette</span>
+                </div>
+                <span class="font-mono font-bold text-xs bg-dark-base text-paper px-3 py-1 rounded-full uppercase">
+                  01 / Identidad
+                </span>
+              </div>
+              <h3 class="font-headline font-bold text-2xl md:text-3xl text-dark-base mb-3 group-hover:text-riot-pink transition-colors">
+                Branding
+              </h3>
+              <p class="font-body text-dark-base/80 text-base leading-relaxed">
+                Naming, identidad visual, paleta y tipografía — todo pensado para que se vea, se sienta y se recuerde.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t-2 border-dashed border-dark-base/20 flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-dark-base/60">SISTEMA COMPLETO</span>
+              <span class="w-8 h-8 rounded-full bg-riot-pink/20 text-riot-pink flex items-center justify-center font-bold group-hover:bg-riot-pink group-hover:text-paper group-hover:rotate-45 transition-all">
+                ✦
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2: Sitios web nuevos -->
+          <div class="bg-white rounded-3xl p-8 border-4 border-dark-base shadow-pop-yellow pop-card-interactive hover:shadow-[7px_7px_0px_#FFE14D] flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-14 h-14 rounded-2xl bg-fulgor-yellow text-dark-base border-2 border-dark-base flex items-center justify-center shadow-sm group-hover:-rotate-6 transition-transform">
+                  <span class="material-symbols-outlined text-3xl">laptop_chromebook</span>
+                </div>
+                <span class="font-mono font-bold text-xs bg-dark-base text-paper px-3 py-1 rounded-full uppercase">
+                  02 / Digital
+                </span>
+              </div>
+              <h3 class="font-headline font-bold text-2xl md:text-3xl text-dark-base mb-3 group-hover:text-amber-500 transition-colors">
+                Sitios web nuevos
+              </h3>
+              <p class="font-body text-dark-base/80 text-base leading-relaxed">
+                Diseño y desarrollo de sitios rápidos, claros y responsive, pensados para que la gente entienda qué hacés y se quede.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t-2 border-dashed border-dark-base/20 flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-dark-base/60">DISEÑO + CODE</span>
+              <span class="w-8 h-8 rounded-full bg-fulgor-yellow/30 text-dark-base flex items-center justify-center font-bold group-hover:bg-fulgor-yellow group-hover:rotate-45 transition-all">
+                ✦
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 3: Remodelación -->
+          <div class="bg-white rounded-3xl p-8 border-4 border-dark-base shadow-pop-blue pop-card-interactive-right hover:shadow-[7px_7px_0px_#3D9DFF] flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-14 h-14 rounded-2xl bg-electric-blue text-paper border-2 border-dark-base flex items-center justify-center shadow-sm group-hover:rotate-6 transition-transform">
+                  <span class="material-symbols-outlined text-3xl">refresh</span>
+                </div>
+                <span class="font-mono font-bold text-xs bg-dark-base text-paper px-3 py-1 rounded-full uppercase">
+                  03 / Rediseño
+                </span>
+              </div>
+              <h3 class="font-headline font-bold text-2xl md:text-3xl text-dark-base mb-3 group-hover:text-electric-blue transition-colors">
+                Remodelación
+              </h3>
+              <p class="font-body text-dark-base/80 text-base leading-relaxed">
+                ¿Ya tenés sitio? No hace falta empezar de cero: lo actualizamos para que funcione de verdad.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t-2 border-dashed border-dark-base/20 flex items-center justify-between">
+              <span class="font-mono text-xs font-bold text-dark-base/60">OPTIMIZACIÓN TOTAL</span>
+              <span class="w-8 h-8 rounded-full bg-electric-blue/20 text-electric-blue flex items-center justify-center font-bold group-hover:bg-electric-blue group-hover:text-paper group-hover:rotate-45 transition-all">
+                ✦
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. CÓMO TRABAJAMOS (PROCESS) - High Energy Dark Studio Block
+         ====================================================================== -->
+    <section class="bg-dark-base text-paper py-20 md:py-28 px-5 sm:px-8 border-b-4 border-dark-base relative" id="como-trabajamos">
+      <div class="max-w-[1360px] mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="sticker-badge bg-electric-blue text-paper px-3 py-1 rounded-md text-xs mb-3 -rotate-1 sticker-hover-wiggle">
+            <span>EL PROCESO</span>
+          </div>
+          <h2 class="font-headline font-bold text-4xl sm:text-5xl md:text-6xl text-paper tracking-tight">
+            Cómo trabajamos
+          </h2>
+          <p class="font-body text-paper/75 text-base md:text-lg mt-4 font-normal">
+            Un método ágil y transparente dividido en tres etapas concretas.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="bg-surface-card rounded-3xl p-8 border-2 border-white/10 hover:border-fulgor-yellow transition-all duration-200 flex flex-col justify-between relative group hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(255,225,77,0.12)]">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-headline font-bold text-5xl text-fulgor-yellow group-hover:scale-105 transition-transform">01</span>
+                <span class="material-symbols-outlined text-paper/40 group-hover:text-fulgor-yellow text-3xl transition-colors">chat_bubble</span>
+              </div>
+              <h3 class="font-headline font-bold text-2xl text-paper mb-3">Conversamos</h3>
+              <p class="font-body text-paper/70 text-sm md:text-base leading-relaxed">
+                Entendemos tu negocio y qué necesitás. Analizamos tus objetivos, tu audiencia y lo que te diferencia de la competencia.
+              </p>
+            </div>
+            <div class="mt-8 pt-5 border-t border-white/10">
+              <span class="inline-flex items-center gap-2 font-mono text-xs font-bold text-fulgor-yellow uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm">schedule</span>
+                Semana 1 · Alineación
+              </span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-surface-card rounded-3xl p-8 border-2 border-white/10 hover:border-riot-pink transition-all duration-200 flex flex-col justify-between relative group hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(255,62,127,0.12)]">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-headline font-bold text-5xl text-riot-pink group-hover:scale-105 transition-transform">02</span>
+                <span class="material-symbols-outlined text-paper/40 group-hover:text-riot-pink text-3xl transition-colors">brush</span>
+              </div>
+              <h3 class="font-headline font-bold text-2xl text-paper mb-3">Diseñamos</h3>
+              <p class="font-body text-paper/70 text-sm md:text-base leading-relaxed">
+                Armamos la propuesta visual y de contenido. Iteramos con feedback directo hasta lograr la pieza exacta que tu marca pide.
+              </p>
+            </div>
+            <div class="mt-8 pt-5 border-t border-white/10">
+              <span class="inline-flex items-center gap-2 font-mono text-xs font-bold text-riot-pink uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm">cycle</span>
+                Semanas 2-3 · Exploración y pulido
+              </span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-surface-card rounded-3xl p-8 border-2 border-white/10 hover:border-electric-blue transition-all duration-200 flex flex-col justify-between relative group hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(61,157,255,0.12)]">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="font-headline font-bold text-5xl text-electric-blue group-hover:scale-105 transition-transform">03</span>
+                <span class="material-symbols-outlined text-paper/40 group-hover:text-electric-blue text-3xl transition-colors">rocket_launch</span>
+              </div>
+              <h3 class="font-headline font-bold text-2xl text-paper mb-3">Entregamos</h3>
+              <p class="font-body text-paper/70 text-sm md:text-base leading-relaxed">
+                Te dejamos todo listo para usar. Desde guías de marca completas hasta el sitio web subido y optimizado en tu propio dominio.
+              </p>
+            </div>
+            <div class="mt-8 pt-5 border-t border-white/10">
+              <span class="inline-flex items-center gap-2 font-mono text-xs font-bold text-electric-blue uppercase tracking-wider">
+                <span class="material-symbols-outlined text-sm">check_circle</span>
+                Semana 4 · Lanzamiento en vivo
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. POR QUÉ FULGOR (VALUES) - Solid High-Contrast Clean Block
+         ====================================================================== -->
+    <section class="bg-paper text-dark-base py-20 md:py-28 px-5 sm:px-8 border-b-4 border-dark-base" id="por-que-fulgor">
+      <div class="max-w-[1360px] mx-auto">
+        <div class="max-w-xl mb-16">
+          <div class="sticker-badge bg-dark-base text-paper px-3 py-1 rounded-md text-xs mb-3 rotate-2 sticker-hover-wiggle">
+            <span>FILOSOFÍA DE TRABAJO</span>
+          </div>
+          <h2 class="font-headline font-bold text-4xl sm:text-5xl md:text-6xl text-dark-base tracking-tight">
+            Por qué fulgor
+          </h2>
+          <p class="font-body text-base md:text-lg text-dark-base/75 mt-3 font-medium">
+            Tres principios innegociables que definen cada proyecto que aceptamos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Pillar 1 -->
+          <div class="bg-white rounded-2xl p-7 border-3 border-dark-base shadow-pop-pink relative flex flex-col justify-between pop-card-interactive hover:shadow-[7px_7px_0px_#FF3E7F]">
+            <div>
+              <div class="inline-block px-2.5 py-1 rounded bg-riot-pink/15 text-riot-pink font-mono font-bold text-xs mb-4">
+                #01 HONESTIDAD
+              </div>
+              <h3 class="font-headline font-bold text-2xl text-dark-base mb-3">
+                Directo, sin vueltas
+              </h3>
+              <p class="font-body text-dark-base/80 text-base leading-relaxed">
+                Nada de procesos eternos ni jerga de agencia. Hablás directo con los que diseñan tu proyecto.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-white rounded-2xl p-7 border-3 border-dark-base shadow-pop-yellow relative flex flex-col justify-between pop-card-interactive hover:shadow-[7px_7px_0px_#FFE14D]">
+            <div>
+              <div class="inline-block px-2.5 py-1 rounded bg-fulgor-yellow/30 text-dark-base font-mono font-bold text-xs mb-4">
+                #02 RESULTADOS
+              </div>
+              <h3 class="font-headline font-bold text-2xl text-dark-base mb-3">
+                Pensado para vender
+              </h3>
+              <p class="font-body text-dark-base/80 text-base leading-relaxed">
+                Una marca linda que no convierte no sirve. Diseñamos con criterio comercial y foco en resultados reales.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-white rounded-2xl p-7 border-3 border-dark-base shadow-pop-blue relative flex flex-col justify-between pop-card-interactive-right hover:shadow-[7px_7px_0px_#3D9DFF]">
+            <div>
+              <div class="inline-block px-2.5 py-1 rounded bg-electric-blue/15 text-electric-blue font-mono font-bold text-xs mb-4">
+                #03 DEDICACIÓN
+              </div>
+              <h3 class="font-headline font-bold text-2xl text-dark-base mb-3">
+                Foco y dedicación
+              </h3>
+              <p class="font-body text-dark-base/80 text-base leading-relaxed">
+                Cada proyecto recibe atención exclusiva y dedicación de punta a punta. Sin procesos burocráticos ni tiempos muertos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CONTACTO / CIERRE (HIGH VOLTAGE PUNCH CLOSING)
+         ====================================================================== -->
+    <section class="bg-dark-base text-paper py-24 md:py-32 px-5 sm:px-8 relative overflow-hidden text-center" id="contacto">
+      <!-- Glow & Ambient Light -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-riot-pink/20 blur-[130px] pointer-events-none rounded-full"></div>
+      
+      <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+        <!-- Star Isotype Sticker in Monochrome with Glow Spark -->
+        <div class="w-16 h-16 rounded-2xl bg-paper p-3 border-3 border-dark-base shadow-pop-pink mb-8 flex items-center justify-center -rotate-6 hover:rotate-12 transition-transform duration-300 animate-pulse-spark">
+          <img alt="fulgor estrella" class="w-full h-full object-contain star-monochrome-black" src="assets/images/logo-star.png" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuC2bc9SbSbe3gVA2mQXpsoos6IdqrFeYKE73bR839VEPbE7-UgTpvxrdDRAx--7JMQ2-MHvTLs81JOoxhU-844UrKap4VVqHfyuJOg5uWMBuUVglH12gXwY0KoALj8FrMn2jK7TiEwNTzHWb2MN0IYRvyNrWoMe8CpO8R0xMAqT4Lan_GnAQ3quztYUFL7aO4DeaqH-d_w788toKKasraBd08M1nL2BMVB517RtcYX2owri-pVaLM8ga0Wq2Rn0Xg6b-Xs';">
+        </div>
+        
+        <div class="sticker-badge bg-fulgor-yellow text-dark-base px-3.5 py-1.5 rounded-full text-xs mb-6 rotate-1 sticker-hover-wiggle">
+          <span>⚡ ESTO PRENDE</span>
+        </div>
+
+        <!-- Tagline -->
+        <h2 class="font-headline font-bold text-5xl sm:text-6xl md:text-7xl text-paper tracking-tight mb-6 leading-tight">
+          Hacemos que tu marca prenda.
+        </h2>
+        <p class="font-body text-paper/85 text-lg md:text-xl max-w-xl mx-auto mb-10 leading-relaxed font-normal">
+          ¿Tenés una idea en mente o necesitás rediseñar tu presencia digital? Escribinos y lo vemos juntos hoy.
+        </p>
+
+        <!-- CTAs: WhatsApp + Email + Instagram -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto justify-center">
+          <!-- WhatsApp Button -->
+          <a class="w-full sm:w-auto px-7 py-4 rounded-full bg-fulgor-yellow text-dark-base font-headline font-bold text-lg border-3 border-dark-base shadow-pop-pink hover:translate-x-1 hover:translate-y-1 hover:shadow-none active:scale-95 transition-all duration-150 flex items-center justify-center gap-2.5 cta-spark-pulse" href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-2xl">chat</span>
+            <span>WhatsApp</span>
+          </a>
+
+          <!-- Email Button (Electric Blue with Pop Yellow Shadow) -->
+          <a class="w-full sm:w-auto px-7 py-4 rounded-full bg-electric-blue text-dark-base font-headline font-bold text-lg border-3 border-dark-base shadow-pop-yellow hover:translate-x-1 hover:translate-y-1 hover:shadow-none active:scale-95 transition-all duration-150 flex items-center justify-center gap-2.5 cta-spark-pulse" href="mailto:studiofulgor01@gmail.com">
+            <span class="material-symbols-outlined text-2xl">mail</span>
+            <span>studiofulgor01@gmail.com</span>
+          </a>
+
+          <!-- Instagram Button (Riot Pink with Pop Blue Shadow) -->
+          <a class="w-full sm:w-auto px-7 py-4 rounded-full bg-riot-pink text-paper font-headline font-bold text-lg border-3 border-dark-base shadow-pop-blue hover:translate-x-1 hover:translate-y-1 hover:shadow-none active:scale-95 transition-all duration-150 flex items-center justify-center gap-2.5 cta-spark-pulse" href="https://www.instagram.com/fulgor_studio_/" rel="noopener noreferrer" target="_blank">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+            </svg>
+            <span>@fulgor_studio_</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       7. FOOTER
+       ====================================================================== -->
+  <footer class="bg-dark-base border-t-2 border-white/10 py-10 px-5 sm:px-8">
+    <div class="max-w-[1360px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <!-- Brand & Star in Monochrome -->
+      <a class="flex items-center gap-2 group" href="#">
+        <div class="w-6 h-6 flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
+          <img alt="fulgor estrella" class="w-full h-full object-contain star-monochrome-white" src="assets/images/logo-star.png" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDDDXGSUnKxlnax0HKYyWSp6w9udamTdxuMhTE6LEOK51qyIOFCNUrQmecDk6SvlAP9ddeGVq0aSKTyqS28eqczwvgzrt8vAbdIRRf4wjNVH5oCTzGH29PF_bllmjzC5g40eKk-0attLN7wWyDAUfwCYPq6gUAcIgdd2PMbgtz9c4yke8HpCSscelQwIi_9MMDViZFdI5WtjgHoM_INF2_vez62t7Qn9ivyVrQ9NEgn_O1suQLoh5isy-OwrVCVx8WdkL0';">
+        </div>
+        <span class="font-headline font-bold text-xl lowercase text-paper">fulgor</span>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-paper/70 uppercase tracking-wider">
+        <a class="hover:text-fulgor-yellow transition-colors" href="#que-hacemos">Qué hacemos</a>
+        <a class="hover:text-fulgor-yellow transition-colors" href="#como-trabajamos">Cómo trabajamos</a>
+        <a class="hover:text-fulgor-yellow transition-colors" href="#por-que-fulgor">Por qué fulgor</a>
+        <a class="hover:text-fulgor-yellow transition-colors" href="#contacto">Contacto</a>
+        <a class="hover:text-riot-pink transition-colors flex items-center gap-1.5" href="https://www.instagram.com/fulgor_studio_/" rel="noopener noreferrer" target="_blank">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="font-mono text-xs text-paper/50 text-center md:text-right">
+        © 2024 fulgor. Todo gran fuego empezó con una chispa.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

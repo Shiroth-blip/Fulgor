@@ -1,0 +1,203 @@
+/* ==========================================================================
+   FULGOR — Design System & Custom Styles
+   Estudio de Branding & Diseño Web
+   ========================================================================== */
+
+/* 1. Material Symbols & Typography Utilities */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* 2. Sticker Badges (Y2K / Pop Punk Aesthetic) */
+.sticker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 2px solid #0A0A0A;
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sticker-badge-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 2px solid #FAFAF7;
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 3. Logo Monochrome Filter Isolation */
+.star-monochrome-white {
+  filter: brightness(0) invert(1);
+}
+
+.star-monochrome-black {
+  filter: brightness(0);
+}
+
+/* 4. Keyframe Animations */
+@keyframes pulse-spark {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 225, 77, 0));
+  }
+  50% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 16px rgba(255, 225, 77, 0.65));
+  }
+}
+
+.animate-pulse-spark {
+  animation: pulse-spark 3.2s ease-in-out infinite;
+}
+
+@keyframes twinkle-mini {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+  50% { transform: scale(1.15) rotate(12deg); opacity: 1; }
+}
+
+.animate-twinkle {
+  animation: twinkle-mini 4s ease-in-out infinite;
+}
+
+/* Sticker Wiggle on Hover */
+@keyframes sticker-wiggle {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-4deg) scale(1.06); }
+  75% { transform: rotate(4deg) scale(1.06); }
+  100% { transform: rotate(0deg) scale(1.04); }
+}
+
+.sticker-hover-wiggle {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.sticker-hover-wiggle:hover {
+  animation: sticker-wiggle 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Continuous Seamless Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.marquee-wrapper:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Squiggle Wave Motion / Underline */
+.squiggle-svg {
+  filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.4));
+}
+
+/* Floating Embers / Sparks */
+@keyframes spark-rise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.7);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-220px) translateX(var(--drift, 15px)) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.ember-spark {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  animation: spark-rise var(--duration, 5.5s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Sticker Pop Card Interactions */
+.pop-card-interactive {
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+.pop-card-interactive:hover {
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+.pop-card-interactive-right:hover {
+  transform: translateY(-8px) rotate(1deg);
+}
+
+/* High-Voltage CTA Magnetic Glow / Shimmer */
+.cta-spark-pulse {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cta-spark-pulse::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: left 0.75s ease;
+}
+
+.cta-spark-pulse:hover::after {
+  left: 130%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #272727;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFE14D;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-spark,
+  .animate-twinkle,
+  .sticker-hover-wiggle:hover,
+  .animate-marquee,
+  .ember-spark,
+  .cta-spark-pulse::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .pop-card-interactive:hover,
+  .pop-card-interactive-right:hover {
+    transform: translateY(-3px) !important;
+  }
+}
